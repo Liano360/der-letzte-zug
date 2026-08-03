@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Der letzte Zug – Das Finanzspiel</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#111827;
+    color:white;
+}
+
+.container{
+    max-width:430px;
+    margin:auto;
+    padding:20px;
+    text-align:center;
+}
+
+.card{
+    background:#1f2937;
+    padding:20px;
+    border-radius:20px;
+    margin-top:20px;
+}
+
+button{
+    width:100%;
+    padding:18px;
+    margin-top:15px;
+    border:none;
+    border-radius:15px;
+    background:#fbbf24;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.money{
+    background:#065f46;
+    padding:15px;
+    border-radius:15px;
+    font-size:24px;
+    margin-bottom:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🚆 Der letzte Zug</h1>
+<h2>Das Finanzspiel</h2>
+
+<div class="money">
+💰 Startkapital: 175.000 €
+</div>
+
+<div class="card">
+
+<p>
+Willkommen zu deiner Reise.
+Jede Entscheidung verändert dein Leben.
+</p>
+
+<button onclick="startGame()">
+▶ Spiel starten
+</button>
+
+</div>
+
+<div id="game" style="display:none;">
+
+<div class="card">
+
+<h2>Du steigst in den letzten Zug ein...</h2>
+
+<p id="text"></p>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function startGame(){
+
+document.getElementById("game").style.display="block";
+
+document.getElementById("text").innerHTML=
+
+"🚆 Deine Reise beginnt jetzt!<br><br>Version Alpha 0.1";
+
+}
+
+</script>
+
+</body>
+</html>
