@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,34 +11,62 @@
 
 <body>
 
-    <!-- Startanimation -->
+    <!-- Start Logo -->
     <div id="splashScreen">
         <h1>DER LETZTE ZUG</h1>
     </div>
 
+
     <!-- Hauptmenü -->
+
     <div id="mainMenu">
 
-        <div class="top">
-            <div class="level">
-                <h2>Level 1</h2>
-                <p>Arbeiter</p>
-            </div>
-
-            <div class="menuButtons">
-                <button>Anleitung</button>
-                <button>Statistiken</button>
-                <button>Einstellungen</button>
-            </div>
+        <!-- Hintergrund Logo -->
+        <div class="backgroundLogo">
+            <h1>DER LETZTE ZUG</h1>
+            <p>Das Finanzspiel</p>
         </div>
 
-        <div class="center">
 
-            <h1 class="backgroundLogo">
-                DER LETZTE ZUG
-            </h1>
+        <!-- Level Karte -->
 
-            <p>Das Finanzspiel</p>
+        <div class="levelCard">
+
+            <h2>Level 1</h2>
+            <p>Arbeiter</p>
+
+            <div class="levelBar">
+                <div class="levelProgress"></div>
+            </div>
+
+        </div>
+
+
+        <!-- Rechte Menü Karten -->
+
+        <div class="sideMenu">
+
+            <button>
+                📖<br>
+                Anleitung
+            </button>
+
+            <button>
+                📊<br>
+                Statistiken
+            </button>
+
+            <button>
+                ⚙️<br>
+                Einstellungen
+            </button>
+
+        </div>
+
+
+        <!-- Spielen -->
+
+        <div class="playArea">
 
             <button id="playButton">
                 SPIELEN
@@ -45,9 +74,12 @@
 
         </div>
 
+
     </div>
 
-    <script src="app.js"></script>
+
+<script src="app.js"></script>
 
 </body>
+
 </html>
