@@ -1,105 +1,53 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Der letzte Zug – Das Finanzspiel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Der letzte Zug – Das Finanzspiel</title>
 
-<style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#111827;
-    color:white;
-}
-
-.container{
-    max-width:430px;
-    margin:auto;
-    padding:20px;
-    text-align:center;
-}
-
-.card{
-    background:#1f2937;
-    padding:20px;
-    border-radius:20px;
-    margin-top:20px;
-}
-
-button{
-    width:100%;
-    padding:18px;
-    margin-top:15px;
-    border:none;
-    border-radius:15px;
-    background:#fbbf24;
-    font-size:20px;
-    font-weight:bold;
-}
-
-.money{
-    background:#065f46;
-    padding:15px;
-    border-radius:15px;
-    font-size:24px;
-    margin-bottom:20px;
-}
-</style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+    <!-- Startanimation -->
+    <div id="splashScreen">
+        <h1>DER LETZTE ZUG</h1>
+    </div>
 
-<h1>🚆 Der letzte Zug</h1>
-<h2>Das Finanzspiel</h2>
+    <!-- Hauptmenü -->
+    <div id="mainMenu">
 
-<div class="money">
-💰 Startkapital: 175.000 €
-</div>
+        <div class="top">
+            <div class="level">
+                <h2>Level 1</h2>
+                <p>Arbeiter</p>
+            </div>
 
-<div class="card">
+            <div class="menuButtons">
+                <button>Anleitung</button>
+                <button>Statistiken</button>
+                <button>Einstellungen</button>
+            </div>
+        </div>
 
-<p>
-Willkommen zu deiner Reise.
-Jede Entscheidung verändert dein Leben.
-</p>
+        <div class="center">
 
-<button onclick="startGame()">
-▶ Spiel starten
-</button>
+            <h1 class="backgroundLogo">
+                DER LETZTE ZUG
+            </h1>
 
-</div>
+            <p>Das Finanzspiel</p>
 
-<div id="game" style="display:none;">
+            <button id="playButton">
+                SPIELEN
+            </button>
 
-<div class="card">
+        </div>
 
-<h2>Du steigst in den letzten Zug ein...</h2>
+    </div>
 
-<p id="text"></p>
-
-</div>
-
-</div>
-
-</div>
-
-<script>
-
-function startGame(){
-
-document.getElementById("game").style.display="block";
-
-document.getElementById("text").innerHTML=
-
-"🚆 Deine Reise beginnt jetzt!<br><br>Version Alpha 0.1";
-
-}
-
-</script>
+    <script src="app.js"></script>
 
 </body>
 </html>
