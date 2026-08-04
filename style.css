@@ -20,71 +20,76 @@ body {
     position: fixed;
     inset: 0;
     background: black;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     z-index: 10;
 }
 
 
 #splashScreen h1 {
-    color: #005eff;
+
+    color: #006cff;
+
     font-size: 48px;
+
     letter-spacing: 4px;
 
+    text-align: center;
+
     text-shadow:
-        0 0 10px #4db8ff,
+        0 0 10px #6bd4ff,
         0 0 25px #0077ff,
-        0 0 50px #0044ff;
+        0 0 45px #004cff;
+
+    animation: heartbeat 2s infinite;
+}
+
+
+/* Logo Herzschlag */
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.05);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.03);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
 }
 
 
 /* Hauptmenü */
 
 #mainMenu {
+
     display: none;
+
     width: 100%;
     height: 100%;
+
     position: relative;
-    background: radial-gradient(circle, #07152f, #000);
-}
 
-
-/* Hintergrund Logo */
-
-.backgroundLogo {
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    text-align: center;
-
-    z-index: 1;
-
-    opacity: 0.15;
-
-}
-
-
-.backgroundLogo h1 {
-
-    color: #006cff;
-
-    font-size: 70px;
-
-    letter-spacing: 5px;
-
-}
-
-
-.backgroundLogo p {
-
-    color: #0099ff;
-
-    font-size: 30px;
+    background:
+    radial-gradient(circle at center,
+    #102a55,
+    #000);
 
 }
 
@@ -96,34 +101,31 @@ body {
     position: absolute;
 
     top: 25px;
+
     left: 50%;
 
     transform: translateX(-50%);
 
-    width: 230px;
+    width: 195px;
 
-    padding: 15px;
+    padding: 12px;
 
     text-align: center;
 
-    border-radius: 25px;
+    border-radius: 22px;
 
-    background: rgba(0, 30, 80, 0.45);
+    background: rgba(0,30,80,0.45);
 
     border: 2px solid #168cff;
 
     box-shadow:
-        0 0 15px #0077ff;
-
-    z-index: 3;
+    0 0 15px #0077ff;
 
 }
 
 
 .levelCard h2 {
-
-    color: white;
-
+    font-size: 20px;
 }
 
 
@@ -131,24 +133,24 @@ body {
 
     color: #8fd5ff;
 
+    font-size: 15px;
+
 }
 
 
-/* Level Balken */
+/* Fortschrittsbalken */
 
 .levelBar {
 
     width: 100%;
 
-    height: 12px;
+    height: 10px;
 
-    margin-top: 15px;
+    margin-top: 12px;
 
     background: #001c4d;
 
     border-radius: 20px;
-
-    overflow: hidden;
 
 }
 
@@ -161,30 +163,30 @@ body {
 
     background: #00aaff;
 
+    border-radius: 20px;
+
     box-shadow:
-        0 0 12px #00aaff;
+    0 0 10px #00aaff;
 
 }
 
 
 
-/* Rechte Menü */
+/* Rechte Menü Buttons */
 
 .sideMenu {
 
     position: absolute;
 
-    right: 25px;
+    right: 18px;
 
-    top: 170px;
+    top: 190px;
 
     display: flex;
 
     flex-direction: column;
 
-    gap: 20px;
-
-    z-index: 3;
+    gap: 15px;
 
 }
 
@@ -192,22 +194,23 @@ body {
 
 .sideMenu button {
 
-    width: 130px;
+    width: 115px;
 
-    height: 75px;
+    height: 55px;
 
-    border-radius: 22px;
+    border-radius: 18px;
 
-    background: rgba(0, 40, 90, 0.5);
+    background: rgba(0,40,90,0.45);
 
-    color: white;
+    border: 1px solid #168cff;
 
-    border: 2px solid #168cff;
+    color:white;
+
+    font-size:14px;
 
     box-shadow:
-        0 0 12px #0077ff;
 
-    font-size: 15px;
+    0 0 10px #0077ff;
 
 }
 
@@ -217,39 +220,36 @@ body {
 
 .playArea {
 
-    position: absolute;
+    position:absolute;
 
-    top: 60%;
+    top:60%;
 
-    left: 50%;
+    left:50%;
 
-    transform: translate(-50%, -50%);
-
-    z-index: 3;
+    transform:translate(-50%,-50%);
 
 }
 
 
+
 #playButton {
 
-    width: 250px;
+    width:240px;
 
-    height: 70px;
+    height:65px;
 
-    border-radius: 30px;
+    border-radius:30px;
 
-    border: none;
+    border:none;
 
-    background: #ffd54f;
+    background:#ffd54f;
 
-    color: #111;
+    font-size:24px;
 
-    font-size: 25px;
-
-    font-weight: bold;
+    font-weight:bold;
 
     box-shadow:
 
-        0 0 20px #ffd54f;
+    0 0 20px #ffd54f;
 
 }
