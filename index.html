@@ -11,71 +11,132 @@
 
 <body>
 
-    <!-- Start Logo -->
-    <div id="splashScreen">
-        <h1>DER LETZTE ZUG</h1>
+<!-- Start Logo -->
+
+<div id="splashScreen">
+    <h1>DER LETZTE ZUG</h1>
+</div>
+
+
+<!-- Hauptmenü -->
+
+<div class="screen" id="mainMenu">
+
+    <div class="levelCard">
+
+        <h2>Level 1</h2>
+        <p>Arbeiter</p>
+
+        <div class="levelBar">
+            <div class="levelProgress"></div>
+        </div>
+
     </div>
 
 
-    <!-- Hauptmenü -->
+    <div class="sideMenu">
 
-    <div id="mainMenu">
+        <button onclick="openScreen('tutorialScreen')">
+            Anleitung
+        </button>
 
-        <!-- Hintergrund Logo -->
-        <div class="backgroundLogo">
-            <h1>DER LETZTE ZUG</h1>
-            <p>Das Finanzspiel</p>
-        </div>
+        <button onclick="openScreen('statsScreen')">
+            Statistiken
+        </button>
 
-
-        <!-- Level Karte -->
-
-        <div class="levelCard">
-
-            <h2>Level 1</h2>
-            <p>Arbeiter</p>
-
-            <div class="levelBar">
-                <div class="levelProgress"></div>
-            </div>
-
-        </div>
-
-
-        <!-- Rechte Menü Karten -->
-
-        <div class="sideMenu">
-
-            <button>
-                📖<br>
-                Anleitung
-            </button>
-
-            <button>
-                📊<br>
-                Statistiken
-            </button>
-
-            <button>
-                ⚙️<br>
-                Einstellungen
-            </button>
-
-        </div>
-
-
-        <!-- Spielen -->
-
-        <div class="playArea">
-
-            <button id="playButton">
-                SPIELEN
-            </button>
-
-        </div>
-
+        <button onclick="openScreen('settingsScreen')">
+            Einstellungen
+        </button>
 
     </div>
+
+
+    <div class="playArea">
+
+        <button id="playButton" onclick="openScreen('startScreen')">
+            SPIELEN
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- Start Auswahl -->
+
+<div class="screen hidden" id="startScreen">
+
+    <h1>Start auswählen</h1>
+
+    <button>
+        Urlaub
+    </button>
+
+    <button>
+        Alltag
+    </button>
+
+    <button onclick="openScreen('mainMenu')">
+        Zurück
+    </button>
+
+</div>
+
+
+
+<!-- Anleitung -->
+
+<div class="screen hidden" id="tutorialScreen">
+
+    <h1>Anleitung</h1>
+
+    <p>
+        Hier erklären wir später das Spiel.
+    </p>
+
+    <button onclick="openScreen('mainMenu')">
+        Zurück
+    </button>
+
+</div>
+
+
+
+<!-- Statistiken -->
+
+<div class="screen hidden" id="statsScreen">
+
+    <h1>Statistiken</h1>
+
+    <p>
+        Gesamt verdient: 0 €
+    </p>
+
+    <button onclick="openScreen('mainMenu')">
+        Zurück
+    </button>
+
+</div>
+
+
+
+<!-- Einstellungen -->
+
+<div class="screen hidden" id="settingsScreen">
+
+    <h1>Einstellungen</h1>
+
+    <p>
+        Einstellungen kommen später.
+    </p>
+
+    <button onclick="openScreen('mainMenu')">
+        Zurück
+    </button>
+
+</div>
+
 
 
 <script src="app.js"></script>
