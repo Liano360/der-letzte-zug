@@ -3,11 +3,13 @@ const mainMenu = document.getElementById("mainMenu");
 
 window.addEventListener("load", () => {
 
+    // Logo bleibt kurz im Mittelpunkt
     setTimeout(() => {
 
-        splashScreen.style.transition = "opacity 1s ease";
+        splashScreen.style.transition = "opacity 1.2s ease";
         splashScreen.style.opacity = "0";
 
+        // Hauptmenü erscheint weich
         setTimeout(() => {
 
             splashScreen.style.display = "none";
@@ -15,14 +17,16 @@ window.addEventListener("load", () => {
             mainMenu.style.display = "block";
             mainMenu.style.opacity = "0";
 
-            mainMenu.style.transition = "opacity 1s ease";
+            mainMenu.style.transition = "opacity 1.2s ease";
 
             setTimeout(() => {
+
                 mainMenu.style.opacity = "1";
+
             }, 100);
 
-        }, 1000);
+        }, 1200);
 
-    }, 2500);
+    }, 3000);
 
 });
