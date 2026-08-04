@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
 
-        splashScreen.style.transition = "opacity 0.8s ease";
+        splashScreen.style.transition = "opacity 1s ease";
         splashScreen.style.opacity = "0";
 
         setTimeout(() => {
@@ -14,14 +14,15 @@ window.addEventListener("load", () => {
 
             mainMenu.style.display = "block";
             mainMenu.style.opacity = "0";
-            mainMenu.style.transition = "opacity 0.8s ease";
+
+            mainMenu.style.transition = "opacity 1s ease";
 
             setTimeout(() => {
                 mainMenu.style.opacity = "1";
-            }, 50);
+            }, 100);
 
-        }, 800);
+        }, 1000);
 
-    }, 2000);
+    }, 2500);
 
 });
