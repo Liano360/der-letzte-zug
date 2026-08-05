@@ -1,3 +1,38 @@
+// Startanimation
+
+const splash = document.getElementById("splashScreen");
+const mainMenu = document.getElementById("mainMenu");
+
+
+window.addEventListener("load", () => {
+
+
+    setTimeout(() => {
+
+
+        splash.style.transition = "opacity 1s ease";
+
+        splash.style.opacity = "0";
+
+
+        setTimeout(() => {
+
+
+            splash.style.display = "none";
+
+
+            mainMenu.classList.add("active");
+
+
+        },1000);
+
+
+
+    },4500);
+
+
+});
+
 // Bildschirme
 
 const screens = {
