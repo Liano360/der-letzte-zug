@@ -1,0 +1,274 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#000;
+}
+
+/* ---------------- Splash ---------------- */
+
+#splashScreen{
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:100;
+}
+
+#splashScreen h1{
+
+    color:#1b7dff;
+
+    font-size:52px;
+
+    letter-spacing:5px;
+
+    text-align:center;
+
+    text-shadow:
+        0 0 10px #9ad8ff,
+        0 0 25px #4db8ff,
+        0 0 45px #006eff;
+
+    animation:heartbeat 2s infinite;
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    15%{
+        transform:scale(1.05);
+    }
+
+}
+
+/* ---------------- Bildschirme ---------------- */
+
+.screen{
+
+    position:absolute;
+
+    inset:0;
+
+    display:none;
+
+    background:
+    radial-gradient(circle at top right,#163f73 0%,transparent 30%),
+    radial-gradient(circle at bottom left,#081d45 0%,transparent 35%),
+    #050914;
+
+}
+
+.screen.active{
+    display:block;
+}
+
+/* ---------------- Level ---------------- */
+
+.levelCard{
+
+    position:absolute;
+
+    top:22px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:170px;
+
+    padding:10px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid #2c8dff;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 0 20px rgba(0,140,255,.35);
+
+}
+
+.levelCard h2{
+
+    font-size:18px;
+
+}
+
+.levelCard p{
+
+    color:#93d7ff;
+
+    margin-top:4px;
+
+    font-size:14px;
+
+}
+
+.levelBar{
+
+    width:100%;
+
+    height:10px;
+
+    background:#08244d;
+
+    border-radius:20px;
+
+    margin-top:12px;
+
+    overflow:hidden;
+
+}
+
+.levelProgress{
+
+    width:40%;
+
+    height:100%;
+
+    background:#25b6ff;
+
+    box-shadow:0 0 12px #25b6ff;
+
+}
+
+/* ---------------- Menü rechts ---------------- */
+
+.sideMenu{
+
+    position:absolute;
+
+    right:18px;
+
+    top:185px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.sideMenu button{
+
+    width:108px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:18px;
+
+    color:white;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid #2c8dff;
+
+    backdrop-filter:blur(8px);
+
+    font-size:13px;
+
+}
+
+/* ---------------- Spielen ---------------- */
+
+.playArea{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:80px;
+
+    transform:translateX(-50%);
+
+}
+
+#playButton{
+
+    width:240px;
+
+    height:68px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#ffd54f;
+
+    color:#111;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    box-shadow:0 0 20px #ffd54f;
+
+}
+
+/* ---------------- Weitere Seiten ---------------- */
+
+.screen h1{
+
+    color:white;
+
+    text-align:center;
+
+    margin-top:120px;
+
+    margin-bottom:30px;
+
+}
+
+.screen p{
+
+    color:white;
+
+    text-align:center;
+
+    padding:0 30px;
+
+}
+
+.bigButton,
+.backButton{
+
+    display:block;
+
+    margin:20px auto;
+
+    width:220px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:22px;
+
+    background:#1b7dff;
+
+    color:white;
+
+    font-size:18px;
+
+}
