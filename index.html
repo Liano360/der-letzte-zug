@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Der letzte Zug – Das Finanzspiel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Startanimation -->
+    <div id="splashScreen">
+        <h1>DER LETZTE ZUG</h1>
+    </div>
+
+    <!-- Hauptmenü -->
+    <div id="mainMenu" class="screen active">
+
+        <!-- Level -->
+        <div class="levelCard">
+            <h2>Level 1</h2>
+            <p>Arbeiter</p>
+
+            <div class="levelBar">
+                <div class="levelProgress"></div>
+            </div>
+        </div>
+
+        <!-- Menü rechts -->
+        <div class="sideMenu">
+            <button id="tutorialBtn">Anleitung</button>
+            <button id="statsBtn">Statistiken</button>
+            <button id="settingsBtn">Einstellungen</button>
+        </div>
+
+        <!-- Spielen -->
+        <div class="playArea">
+            <button id="playButton">SPIELEN</button>
+        </div>
+
+    </div>
+
+    <!-- Startauswahl -->
+    <div id="playScreen" class="screen">
+
+        <h1>Start auswählen</h1>
+
+        <button class="bigButton">Alltag</button>
+        <button class="bigButton">Urlaub</button>
+
+        <button class="backButton">← Zurück</button>
+
+    </div>
+
+    <!-- Anleitung -->
+    <div id="tutorialScreen" class="screen">
+
+        <h1>Anleitung</h1>
+
+        <p>Hier kommt später die komplette Spielanleitung.</p>
+
+        <button class="backButton">← Zurück</button>
+
+    </div>
+
+    <!-- Statistik -->
+    <div id="statsScreen" class="screen">
+
+        <h1>Statistiken</h1>
+
+        <p>Gesamt verdient: 0 €</p>
+
+        <button class="backButton">← Zurück</button>
+
+    </div>
+
+    <!-- Einstellungen -->
+    <div id="settingsScreen" class="screen">
+
+        <h1>Einstellungen</h1>
+
+        <p>Hier kommen später die Einstellungen.</p>
+
+        <button class="backButton">← Zurück</button>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
