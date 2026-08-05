@@ -42,17 +42,106 @@
 
     </div>
 
-    <!-- Startauswahl -->
-    <div id="playScreen" class="screen">
+<!-- Spielverwaltung -->
 
-        <h1>Start auswählen</h1>
+<div id="playScreen" class="screen">
 
-        <button class="bigButton">Alltag</button>
-        <button class="bigButton">Urlaub</button>
+    <!-- Zurück -->
+    <button class="smallBackButton">
+        ← Zurück
+    </button>
 
-        <button class="backButton">← Zurück</button>
+
+    <!-- Titel -->
+
+    <h1 class="menuTitle">
+        Spielen
+    </h1>
+
+
+    <!-- Buttons Mitte -->
+
+    <div class="gameStartButtons">
+
+        <button id="newGameButton" class="appleButton">
+            Neues Spiel
+        </button>
+
+
+        <button id="loadGameButton" class="appleButton">
+            Spiel laden
+        </button>
 
     </div>
+
+
+    <!-- Starten -->
+
+    <button id="startButton" class="startButton">
+
+        Starten
+
+    </button>
+
+
+</div>
+
+
+
+<!-- Neues Spiel Popup -->
+
+<div id="newGamePopup" class="popup">
+
+    <div class="popupBox">
+
+        <h2>
+            Neues Spiel
+        </h2>
+
+
+        <input 
+        id="gameNameInput"
+        type="text"
+        placeholder="Name des Spiels">
+
+
+        <button id="saveGameName">
+            Speichern
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- Laden Popup -->
+
+<div id="loadGamePopup" class="popup">
+
+    <div class="popupBox">
+
+        <h2>
+            Spiele laden
+        </h2>
+
+
+        <div id="saveList">
+
+            Keine gespeicherten Spiele
+
+        </div>
+
+
+        <button class="closePopup">
+            Schließen
+        </button>
+
+
+    </div>
+
+</div>
 
     <!-- Anleitung -->
     <div id="tutorialScreen" class="screen">
