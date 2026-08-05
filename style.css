@@ -272,3 +272,288 @@ html,body{
     font-size:18px;
 
 }
+
+/* =========================
+   Beta 0.4 Spielverwaltung
+========================= */
+
+
+/* Zurück Button */
+
+.smallBackButton {
+
+    position:absolute;
+
+    top:25px;
+
+    left:20px;
+
+    width:90px;
+
+    height:38px;
+
+    border-radius:18px;
+
+    border:1px solid #2c8dff;
+
+    background:rgba(255,255,255,0.08);
+
+    color:white;
+
+    backdrop-filter:blur(10px);
+
+    font-size:14px;
+
+}
+
+
+
+/* Überschrift */
+
+.menuTitle {
+
+    padding-top:90px;
+
+    text-align:center;
+
+    color:white;
+
+    font-size:32px;
+
+}
+
+
+
+/* Mittlere Buttons */
+
+.gameStartButtons {
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+
+
+.appleButton {
+
+    width:260px;
+
+    height:70px;
+
+    border-radius:25px;
+
+    border:1px solid #5ab8ff;
+
+    background:
+
+    rgba(255,255,255,0.12);
+
+    color:white;
+
+    font-size:22px;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+
+    0 0 20px rgba(0,140,255,.4);
+
+}
+
+
+
+/* Start Button unten */
+
+.startButton {
+
+
+    position:absolute;
+
+
+    bottom:45px;
+
+
+    left:50%;
+
+
+    transform:translateX(-50%);
+
+
+    width:85%;
+
+
+    height:70px;
+
+
+    border-radius:25px;
+
+
+    border:none;
+
+
+    background:#1677ff;
+
+
+    color:white;
+
+
+    font-size:24px;
+
+
+    font-weight:bold;
+
+
+    box-shadow:
+
+    0 0 25px #1677ff;
+
+}
+
+
+
+/* Popups */
+
+.popup {
+
+
+    display:none;
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+
+    rgba(0,0,0,.55);
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    z-index:50;
+
+
+}
+
+
+
+.popupBox {
+
+
+    width:320px;
+
+
+    padding:25px;
+
+
+    border-radius:30px;
+
+
+    background:
+
+
+    rgba(255,255,255,.12);
+
+
+    border:1px solid #3aa8ff;
+
+
+    backdrop-filter:blur(20px);
+
+
+    text-align:center;
+
+
+    color:white;
+
+
+    box-shadow:
+
+    0 0 35px rgba(0,140,255,.5);
+
+
+}
+
+
+
+.popupBox h2 {
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.popupBox input {
+
+
+    width:100%;
+
+
+    height:50px;
+
+
+    border-radius:15px;
+
+
+    border:none;
+
+
+    padding:10px;
+
+
+    font-size:18px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.popupBox button {
+
+
+    width:100%;
+
+
+    height:50px;
+
+
+    border-radius:20px;
+
+
+    border:none;
+
+
+    background:#1677ff;
+
+
+    color:white;
+
+
+    font-size:18px;
+
+
+}
