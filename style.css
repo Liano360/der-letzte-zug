@@ -557,3 +557,21 @@ html,body{
 
 
 }
+
+#versionText {
+
+    position:absolute;
+
+    bottom:35px;
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:14px;
+
+    color:rgba(170,220,255,0.7);
+
+    letter-spacing:1px;
+
+}
