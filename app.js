@@ -1,35 +1,27 @@
+// ===============================
 // Startanimation
+// ===============================
 
 const splash = document.getElementById("splashScreen");
 const mainMenu = document.getElementById("mainMenu");
 
-
 window.addEventListener("load", () => {
 
+    if (!splash || !mainMenu) return;
 
     setTimeout(() => {
 
-
         splash.style.transition = "opacity 1s ease";
-
         splash.style.opacity = "0";
-
 
         setTimeout(() => {
 
-
             splash.style.display = "none";
-
-
             mainMenu.classList.add("active");
 
+        }, 1000);
 
-        },1000);
-
-
-
-    },4500);
-
+    }, 4500);
 
 });
 
