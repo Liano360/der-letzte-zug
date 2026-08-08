@@ -33,11 +33,23 @@ window.addEventListener("load", () => {
 
 });
 
+
+// ===============================
 // Bildschirme
+// ===============================
 
 const screens = {
+
     main: document.getElementById("mainMenu"),
-    play: document.getElementById("playScreen")
+
+    play: document.getElementById("playScreen"),
+
+    tutorial: document.getElementById("tutorialScreen"),
+
+    stats: document.getElementById("statsScreen"),
+
+    settings: document.getElementById("settingsScreen")
+
 };
 
 
@@ -52,37 +64,108 @@ function showScreen(screen){
     });
 
 
-    screen.classList.add("active");
+    if(screen){
+        screen.classList.add("active");
+    }
 
 }
 
 
 
-// Hauptmenü Buttons
+// ===============================
+// Hauptmenü → Spielen
+// ===============================
 
-const playButton = document.getElementById("playButton");
+const playButton =
+document.getElementById("playButton");
 
 
-playButton.addEventListener("click",()=>{
+if(playButton){
 
-    showScreen(screens.play);
+    playButton.addEventListener("click",()=>{
+
+        showScreen(screens.play);
+
+    });
+
+}
+
+
+
+// ===============================
+// Hauptmenü → Anleitung
+// ===============================
+
+const tutorialBtn =
+document.getElementById("tutorialBtn");
+
+
+if(tutorialBtn){
+
+    tutorialBtn.addEventListener("click",()=>{
+
+        showScreen(screens.tutorial);
+
+    });
+
+}
+
+
+
+// ===============================
+// Hauptmenü → Statistiken
+// ===============================
+
+const statsBtn =
+document.getElementById("statsBtn");
+
+
+if(statsBtn){
+
+    statsBtn.addEventListener("click",()=>{
+
+        showScreen(screens.stats);
+
+    });
+
+}
+
+
+
+// ===============================
+// Hauptmenü → Einstellungen
+// ===============================
+
+const settingsBtn =
+document.getElementById("settingsBtn");
+
+
+if(settingsBtn){
+
+    settingsBtn.addEventListener("click",()=>{
+
+        showScreen(screens.settings);
+
+    });
+
+}
+
+
+
+// ===============================
+// Zurück-Buttons
+// ===============================
+
+document.querySelectorAll(".smallBackButton")
+.forEach(button => {
+
+    button.addEventListener("click",()=>{
+
+        showScreen(screens.main);
+
+    });
 
 });
-
-
-
-// Zurück Button
-
-const backButton = document.querySelector(".smallBackButton");
-
-
-backButton.addEventListener("click",()=>{
-
-    showScreen(screens.main);
-
-});
-
-
 
 // Neues Spiel
 
