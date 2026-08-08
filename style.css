@@ -624,3 +624,43 @@ html,body{
 #versionText {
     z-index: 20;
 }
+
+/* =========================
+   Beta 0.4.1 – Unterseiten
+========================= */
+
+.screen {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.screen:not(.active) {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* Zurück-Button auf allen Unterseiten */
+
+.screen .smallBackButton {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    z-index: 50;
+}
+
+/* Titel oben mittig */
+
+.screen .menuTitle {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 40;
+    white-space: nowrap;
+}
