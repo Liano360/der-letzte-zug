@@ -583,3 +583,44 @@ html,body{
     user-select:none;
 
 }
+
+/* =========================
+   Loading Screen Logo Fix
+========================= */
+
+#splashScreen .logo {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 10;
+
+    display: block;
+
+    width: 90%;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    text-shadow:
+        0 0 10px rgba(80,180,255,.8),
+        0 0 25px rgba(30,130,255,.6);
+}
+
+#versionText {
+    z-index: 20;
+}
