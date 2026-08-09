@@ -2,29 +2,54 @@
 // Startanimation
 // ===============================
 
-const splash = document.getElementById("splashScreen");
-const mainMenu = document.getElementById("mainMenu");
+function startSplashAnimation() {
 
-window.addEventListener("load", () => {
+    const splash = document.getElementById("splashScreen");
+    const mainMenu = document.getElementById("mainMenu");
 
     if (!splash || !mainMenu) return;
 
+    // Hauptmenü zunächst ausblenden
+    mainMenu.classList.remove("active");
+
+    // Startanimation sichtbar halten
+    splash.style.display = "flex";
+    splash.style.opacity = "1";
+    splash.style.visibility = "visible";
+
+    // Nach 4,5 Sekunden beginnt das Ausblenden
     setTimeout(() => {
 
         splash.style.transition = "opacity 1s ease";
         splash.style.opacity = "0";
 
+        // Nach der 1-sekündigen Animation komplett entfernen
         setTimeout(() => {
 
             splash.style.display = "none";
+            splash.style.visibility = "hidden";
+
             mainMenu.classList.add("active");
 
         }, 1000);
 
     }, 4500);
+}
 
-});
 
+// DOM ist bereit
+if (document.readyState === "loading") {
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        startSplashAnimation
+    );
+
+} else {
+
+    startSplashAnimation();
+
+}
 
 // ===============================
 // Bildschirme
