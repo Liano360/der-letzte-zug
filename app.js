@@ -2,39 +2,46 @@
 // Startanimation
 // ===============================
 
-function startSplashAnimation() {
+document.addEventListener("DOMContentLoaded", function () {
 
     const splash = document.getElementById("splashScreen");
     const mainMenu = document.getElementById("mainMenu");
 
-    if (!splash || !mainMenu) return;
+    if (!splash || !mainMenu) {
+        return;
+    }
 
-    // Hauptmenü zunächst ausblenden
+    // Hauptmenü während der Startanimation verstecken
     mainMenu.classList.remove("active");
 
-    // Startanimation sichtbar halten
+    // Startbildschirm sichtbar machen
     splash.style.display = "flex";
-    splash.style.opacity = "1";
     splash.style.visibility = "visible";
+    splash.style.opacity = "1";
+    splash.style.pointerEvents = "auto";
 
-    // Nach 4,5 Sekunden beginnt das Ausblenden
-    setTimeout(() => {
+    // 4,5 Sekunden warten
+    setTimeout(function () {
 
+        // Ausblenden starten
         splash.style.transition = "opacity 1s ease";
         splash.style.opacity = "0";
+        splash.style.pointerEvents = "none";
 
-        // Nach der 1-sekündigen Animation komplett entfernen
-        setTimeout(() => {
+        // Nach der Fade-Animation vollständig entfernen
+        setTimeout(function () {
 
             splash.style.display = "none";
             splash.style.visibility = "hidden";
 
+            // Hauptmenü anzeigen
             mainMenu.classList.add("active");
 
         }, 1000);
 
     }, 4500);
-}
+
+});
 
 
 // DOM ist bereit
