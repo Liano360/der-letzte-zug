@@ -191,25 +191,91 @@ document.querySelectorAll(".smallBackButton")
 
 });
 
+// ===============================
 // Neues Spiel
+// ===============================
 
 const newGameButton =
 document.getElementById("newGameButton");
 
-
 const newGamePopup =
 document.getElementById("newGamePopup");
 
+const gameNameInput =
+document.getElementById("gameNameInput");
 
-newGameButton.addEventListener("click",()=>{
+const saveGameName =
+document.getElementById("saveGameName");
 
-    newGamePopup.style.display="flex";
 
-    document
-    .getElementById("gameNameInput")
-    .focus();
+if (newGameButton && newGamePopup) {
 
-});
+    newGameButton.addEventListener("click", () => {
+
+        newGamePopup.style.display = "flex";
+
+        if (gameNameInput) {
+            gameNameInput.focus();
+        }
+
+    });
+
+}
+
+
+
+// ===============================
+// Name speichern
+// ===============================
+
+if (saveGameName) {
+
+    saveGameName.addEventListener("click", () => {
+
+        if (!gameNameInput) return;
+
+        const name =
+            gameNameInput.value.trim();
+
+        if (name !== "") {
+
+            localStorage.setItem(
+                "currentGameName",
+                name
+            );
+
+            if (newGamePopup) {
+                newGamePopup.style.display = "none";
+            }
+
+        }
+
+    });
+
+}
+
+
+
+// ===============================
+// Spiel laden
+// ===============================
+
+const loadGameButton =
+document.getElementById("loadGameButton");
+
+const loadGamePopup =
+document.getElementById("loadGamePopup");
+
+
+if (loadGameButton && loadGamePopup) {
+
+    loadGameButton.addEventListener("click", () => {
+
+        loadGamePopup.style.display = "flex";
+
+    });
+
+}
 
 
 
