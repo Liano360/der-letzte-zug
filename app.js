@@ -278,62 +278,6 @@ if (loadGameButton && loadGamePopup) {
 }
 
 
-
-
-// Name speichern
-
-const saveGameName =
-document.getElementById("saveGameName");
-
-
-saveGameName.addEventListener("click",()=>{
-
-
-    let name =
-    document.getElementById("gameNameInput").value;
-
-
-    if(name.trim() !== ""){
-
-
-        localStorage.setItem(
-            "currentGameName",
-            name
-        );
-
-
-        newGamePopup.style.display="none";
-
-
-    }
-
-
-});
-
-
-
-
-// Spiel laden
-
-const loadGameButton =
-document.getElementById("loadGameButton");
-
-
-const loadGamePopup =
-document.getElementById("loadGamePopup");
-
-
-loadGameButton.addEventListener("click",()=>{
-
-
-    loadGamePopup.style.display="flex";
-
-
-});
-
-
-
-
 // Popup schließen
 
 document.querySelectorAll(".closePopup")
