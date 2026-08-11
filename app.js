@@ -217,6 +217,14 @@ const gameNameInput =
 const saveGameName =
     document.getElementById("saveGameName");
 
+const savedGameName =
+    localStorage.getItem("currentGameName");
+
+if (savedGameName && newGameButton) {
+
+    newGameButton.textContent = savedGameName;
+
+}
 
 if (newGameButton && newGamePopup) {
 
@@ -251,18 +259,24 @@ if (saveGameName) {
         const name =
             gameNameInput.value.trim();
 
-
         if (name === "") {
             return;
         }
 
-
+        // Spielnamen speichern
         localStorage.setItem(
             "currentGameName",
             name
         );
 
+        // Namen im Button anzeigen
+        if (newGameButton) {
 
+            newGameButton.textContent = name;
+
+        }
+
+        // Popup schließen
         if (newGamePopup) {
 
             newGamePopup.style.display = "none";
