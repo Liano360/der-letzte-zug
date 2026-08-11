@@ -312,13 +312,25 @@ html,body{
 
 .menuTitle {
 
-    padding-top:90px;
+    position:absolute;
 
-    text-align:center;
+    top:28px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    margin:0;
 
     color:white;
 
-    font-size:32px;
+    font-size:20px;
+
+    font-weight:600;
+
+    text-align:center;
+
+    white-space:nowrap;
 
 }
 
