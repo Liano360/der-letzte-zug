@@ -287,8 +287,6 @@ if (saveGameName) {
 
 }
 
-
-
 // ========================================
 // SPIEL LADEN
 // ========================================
@@ -299,6 +297,9 @@ const loadGameButton =
 const loadGamePopup =
     document.getElementById("loadGamePopup");
 
+const saveList =
+    document.getElementById("saveList");
+
 
 if (loadGameButton && loadGamePopup) {
 
@@ -306,11 +307,66 @@ if (loadGameButton && loadGamePopup) {
 
         loadGamePopup.style.display = "flex";
 
+        if (saveList) {
+
+            saveList.innerHTML = "";
+
+            const savedGame =
+                localStorage.getItem("currentGameName");
+
+            if (savedGame) {
+
+                const gameButton =
+                    document.createElement("button");
+
+                gameButton.textContent = savedGame;
+
+                gameButton.style.width = "100%";
+                gameButton.style.marginBottom = "10px";
+
+                gameButton.addEventListener("click", () => {
+
+                    // Ausgewähltes Spiel merken
+                    localStorage.setItem(
+                        "selectedGameName",
+                        savedGame
+                    );
+
+                    // Namen im Spiel-laden-Button anzeigen
+                    loadGameButton.textContent =
+                        savedGame;
+
+                    // Popup schließen
+                    loadGamePopup.style.display = "none";
+
+                });
+
+                saveList.appendChild(gameButton);
+
+            } else {
+
+                saveList.textContent =
+                    "Keine gespeicherten Spiele";
+
+            }
+
+        }
+
     });
 
 }
 
+// Ausgewähltes Spiel wiederherstellen
 
+const selectedGameName =
+    localStorage.getItem("selectedGameName");
+
+if (selectedGameName && loadGameButton) {
+
+    loadGameButton.textContent =
+        selectedGameName;
+
+}
 
 // ========================================
 // POPUPS SCHLIESSEN
