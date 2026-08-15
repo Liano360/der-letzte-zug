@@ -354,10 +354,40 @@ if (loadGameButton && loadGamePopup) {
                 gameButton.addEventListener("click", () => {
 
                     // Ausgewähltes Spiel merken
-                    localStorage.setItem(
-                        "selectedGameName",
-                        savedGame
-                    );
+        gameButton.addEventListener("click", () => {
+
+    // Geladenes Spiel als einziges
+    // ausgewähltes Spiel festlegen
+    localStorage.setItem(
+        "selectedGameName",
+        savedGame
+    );
+
+    localStorage.setItem(
+        "selectedGameType",
+        "loaded"
+    );
+
+
+    // Namen im Spiel-laden-Button anzeigen
+    loadGameButton.textContent =
+        savedGame;
+
+
+    // Neues-Spiel-Button zurücksetzen
+    if (newGameButton) {
+
+        newGameButton.textContent =
+            "Neues Spiel";
+
+    }
+
+
+    // Popup schließen
+    loadGamePopup.style.display =
+        "none";
+
+});
 
                     // Namen im Spiel-laden-Button anzeigen
                     loadGameButton.textContent =
