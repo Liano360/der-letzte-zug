@@ -263,11 +263,26 @@ if (saveGameName) {
             return;
         }
 
-        // Spielnamen speichern
+
+        // Neues Spiel speichern
         localStorage.setItem(
             "currentGameName",
             name
         );
+
+
+        // Neues Spiel als einziges
+        // ausgewähltes Spiel festlegen
+        localStorage.setItem(
+            "selectedGameName",
+            name
+        );
+
+        localStorage.setItem(
+            "selectedGameType",
+            "new"
+        );
+
 
         // Namen im Button anzeigen
         if (newGameButton) {
@@ -275,6 +290,18 @@ if (saveGameName) {
             newGameButton.textContent = name;
 
         }
+
+
+        // Falls vorher ein geladenes
+        // Spiel ausgewählt war:
+        // dessen Button wieder zurücksetzen
+        if (loadGameButton) {
+
+            loadGameButton.textContent =
+                "Spiel laden";
+
+        }
+
 
         // Popup schließen
         if (newGamePopup) {
